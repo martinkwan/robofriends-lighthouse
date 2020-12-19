@@ -3,7 +3,6 @@ import CounterButton from './CounterButton';
 
 class Header extends Component {
 	render() {
-		console.log('header');
 		return (
 			<div>
 				<h1 className='f2'>RoboFriends</h1>
