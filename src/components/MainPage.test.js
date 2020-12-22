@@ -54,3 +54,16 @@ it('filters robots correctly 2', () => {
 
   expect(wrapper3.instance().filterRobots()).toEqual([]);
 })
+
+it('renders Loading text if isPending is true', () => {
+  const mockProps = {
+    onRequestRobots: jest.fn(),
+    robots: [],
+    searchField: '',
+    isPending: true,
+  }
+  const wrapper4 = shallow(<MainPage {...mockProps}/>);
+
+  expect(wrapper4.find('h1').text()).toEqual('Loading');
+
+})
